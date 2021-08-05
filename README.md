@@ -2,6 +2,7 @@
 
 ## Introduction
 myList is a web application to organize your tasks, inspired by Todoist.
+The project aims to put into practice all the technologies and tools used.
 
 ## Technologies & tools
 

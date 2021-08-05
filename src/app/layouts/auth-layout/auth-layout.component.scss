@@ -1,0 +1,26 @@
+@import 'settings';
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $background-color;
+
+    &__toolbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+
+    &__block{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__form{
+        width: 400px;
+    }
+}
