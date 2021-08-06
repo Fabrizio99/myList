@@ -1,0 +1,11 @@
+<mat-form-field appearance="fill" class="container__field">
+    <mat-label>{{inputForm.label}}</mat-label>
+    <input
+        [type]="inputForm.type"
+        matInput
+        [formControlName]="inputForm.formControl"
+    />
+    <mat-error *ngFor="let error of inputForm.errors" ngIf="error.validation">
+        {{error.text}}
+    </mat-error>
+</mat-form-field>
