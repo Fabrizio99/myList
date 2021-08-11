@@ -1,0 +1,19 @@
+<form [formGroup]="authForm" class="container" autocomplete="off">
+    <h2 class="container__title">
+        {{title}}
+    </h2>
+    
+    <mat-form-field *ngFor="let inputForm of inputFormList" appearance="fill" class="container__field">
+        <mat-label>{{inputForm.label}}</mat-label>
+        <input
+            [type]="inputForm.type"
+            matInput
+            [formControlName]="inputForm.formControl"
+        />
+        <mat-error *ngIf="getControlForm(inputForm.formControl)!.invalid">
+            {{getMessageError(inputForm.formControl, inputForm.errors)}}
+        </mat-error>
+        
+    </mat-form-field>
+    <button [disabled]="authForm.invalid" class="container__button" mat-raised-button color="primary">{{textButton}}</button>
+</form>
